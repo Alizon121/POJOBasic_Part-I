@@ -27,8 +27,12 @@ let objArray = [
 function keyInObjectArray(objArray, keyString) {
   for(let i = 0; i < objArray.length; i++) {
     let objects = objArray[i];
-    
+    let keys = Object.keys(objects)
+    if (keys.includes(keyString)) {
+      return true;
+    }
   }
+  return false;
 }
 
 console.log(keyInObjectArray(objArray, 'planet')); // => true

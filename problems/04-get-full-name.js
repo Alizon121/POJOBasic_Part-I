@@ -22,7 +22,7 @@ let arr = [];
 return arr.join(" ")
 }
 
-console.log(getFullName(p1)); // => 'John Doe'
+console.log(getFullName(p1)); // => 'John Doe' 
 console.log(getFullName(p2)); // => 'Charlie Brown'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = getFullName;
