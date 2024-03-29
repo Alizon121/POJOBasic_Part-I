@@ -9,10 +9,19 @@ let obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
 doesKeyExist(obj1, 'course'); // => true
 doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
+let obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
 
 function doesKeyExist(obj, key) {
-  // Your code here 
+  for(let keys in obj) {
+    if(keys.includes(key)) {
+      return true;
+
+    }
+  }
+  return false;
 }
 
+console.log(doesKeyExist(obj1, 'course')); // => true
+console.log(doesKeyExist(obj1, 'name')); // => false
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = doesKeyExist;
