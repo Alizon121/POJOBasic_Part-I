@@ -12,31 +12,20 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  let obj = {};
-  obj["apple"] = 1;
-  obj["pineapple"] = 1;
-  obj["mango"] = 1;
-  obj["potato"] = 1;
-  obj["banana"] = 1;
-
-  let newObj = {};
+  let arrayMap = {};
   
-  for(let i = 0; i < array.length; i++) {
-    let fruits = array[i];
-    let keys = Object.keys(obj);
-
-    
-    if(keys.includes(fruits)) {
-      console.log(obj[fruits]++);
-
-      
+  for(let char of array) {
+    if(arrayMap[char]) {
+      arrayMap[char]++;
+    } else {
+      arrayMap[char] = 1;
     }
-    }
-
+  }
+  return arrayMap;
   }
 
 console.log(arrayConverter(["apple", "apple"])); // => {apple: 2}
-console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple: 1}
-console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {apple: 1, banana: 2, potato: 1}
+// console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple: 1}
+// console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {apple: 1, banana: 2, potato: 1}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
