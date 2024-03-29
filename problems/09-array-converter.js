@@ -12,8 +12,20 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
-  // Your code here 
+  let obj = {};
+  obj["apple"] = 0;
+  obj["pineapple"] = 0;
+  obj["mango"] = 0;
+  obj["potato"] = 0;
+  for(let i = 0; i < array.length; i++) {
+    let fruits = array[i];
+    Object.keys(obj);
+    console.log(Object.keys(obj));
+    // if(fruits.includes())
+  }
 }
-
+console.log(arrayConverter(["apple", "apple"])); // => {apple: 2}
+console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple: 1}
+console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {apple: 1, banana: 2, potato: 1}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
