@@ -10,16 +10,19 @@ let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
 getFullName(p2); // => 'Charlie Brown'
 ***********************************************************************/
 let p1 = {firstName: 'John', lastName: 'Doe'};
-// let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
+let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
 
 function getFullName(person) {
- for(let key in person) {
-  console.log(person[key]);
-
+let arr = [];
+    for(let key in person) {
+        if (typeof person[key] === "string") {
+           arr.push(person[key])
+        }
  }
+return arr.join(" ")
 }
 
 console.log(getFullName(p1)); // => 'John Doe'
-// console.log(getFullName(p2)); // => 'Charlie Brown'
+console.log(getFullName(p2)); // => 'Charlie Brown'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = getFullName;
