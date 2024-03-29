@@ -27,7 +27,7 @@ let objArray = [
 function keyInObjectArray(objArray, keyString) {
   for(let i = 0; i < objArray.length; i++) {
     let objects = objArray[i];
-    console.log(typeof objects);
+    
   }
 }
 
