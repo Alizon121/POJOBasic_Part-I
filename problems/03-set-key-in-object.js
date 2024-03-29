@@ -9,13 +9,17 @@ Examples:
 let obj = {}
 setKeyInObject(obj, "apple", "yum"); // => {apple: "yum"}
 
-let obj1 = {str: "hello"}
+
 setKeyInObject(obj1, "num", 3); // => {str: "hello", num: 3}
 ***********************************************************************/
+let obj = {}
+let obj1 = {str: "hello"}
 
 function setKeyInObject(obj, string, value) {
-  // Your code here 
+  obj[string] = value;
+  return obj;
 }
-
+console.log(setKeyInObject(obj, "apple", "yum")); // => {apple: "yum"\
+console.log(setKeyInObject(obj1, "num", 3)); // => {str: "hello", num: 3}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = setKeyInObject;
