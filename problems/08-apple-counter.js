@@ -27,10 +27,34 @@ let obj3 = {
 };
 appleCounter(obj3); // => 3
 ***********************************************************************/
+let obj = { banana: "yay!" };
+
+let obj1 = { crabapple: "yum!" };
+
+let obj2 = { crabapple: "yum!", honeyapple: "super yum", banana: "yay" };
+
+let obj3 = {
+  crabApple: "yum!",
+  honeyApple: "super yum",
+  banana: "yay",
+  bigapple: "NYC"
+};
 
 function appleCounter(appleObj) {
-  // Your code here 
+  let count = 0;
+  for(let keys in appleObj) {
+    let keysLow = keys.toLowerCase();
+    if(keysLow.includes("apple")) {
+      count++;
+    }
+  }
+  return count;
 }
 
+
+console.log(appleCounter(obj)); // => 0
+console.log(appleCounter(obj1)); // => 1
+console.log(appleCounter(obj2)); // => 2
+console.log(appleCounter(obj3)); // => 3
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = appleCounter;
