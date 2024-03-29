@@ -4,7 +4,7 @@ an array of all the values within that Object.
 
 
 Do this once using using a `for...in` loop and once using `Object.values`.
-
+""
 
 Examples:
 
@@ -29,13 +29,13 @@ function valuesInObject(obj) {
 let newArr = [];
 for (let value in obj) {
 
-newArr.push(value);
+newArr.push(obj[value]);
 }
 return newArr;
 }
 
 
-valuesInObject(animals); // => ["Wolfie", "Jet", "Bilbo"]
-valuesInObject(foods); // => ["tart", "sour", "sweet"]
+console.log(valuesInObject(animals)); // => ["Wolfie", "Jet", "Bilbo"]
+console.log(valuesInObject(foods)); // => ["tart", "sour", "sweet"]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valuesInObject;
