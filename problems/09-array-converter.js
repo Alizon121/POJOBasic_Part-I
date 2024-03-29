@@ -13,17 +13,28 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 
 function arrayConverter(array) {
   let obj = {};
-  obj["apple"] = 0;
-  obj["pineapple"] = 0;
-  obj["mango"] = 0;
-  obj["potato"] = 0;
+  obj["apple"] = 1;
+  obj["pineapple"] = 1;
+  obj["mango"] = 1;
+  obj["potato"] = 1;
+  obj["banana"] = 1;
+
+  let newObj = {};
+  
   for(let i = 0; i < array.length; i++) {
     let fruits = array[i];
-    Object.keys(obj);
-    console.log(Object.keys(obj));
-    // if(fruits.includes())
+    let keys = Object.keys(obj);
+
+    
+    if(keys.includes(fruits)) {
+      console.log(obj[fruits]++);
+
+      
+    }
+    }
+
   }
-}
+
 console.log(arrayConverter(["apple", "apple"])); // => {apple: 2}
 console.log(arrayConverter(["mango", "pineapple"])); // => {mango: 1, pineapple: 1}
 console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {apple: 1, banana: 2, potato: 1}
